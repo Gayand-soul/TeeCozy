@@ -3,6 +3,9 @@
     margin:0;
     padding:0;
 }
+body{
+    background-color: rgb(226, 215, 206);
+}
 .header {
     min-height: 100vh;  /*..Header justeras:img täcker hela...*/
     width: 100%;
@@ -130,12 +133,55 @@ h4 {
 }
 
 
-
-
 /*--------------inställningar för små skärmar: Products sida-----------------------------*/
 @media(max-width: 700px){
     .row{         
       flex-direction: column;  /*..för små skärmar skapas mindre kolumner ...*/
        
     }
+}
+
+/*....ABOUT US SECTION...............*/
+.AboutUs-box {
+
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;   
+    
+  
+}
+
+.row1{
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px
+}
+
+
+.row1 .About-left {
+    overflow: hidden;
+
+}
+.row1 .About-left img { /*..Måste fixa i affinity bakgrund skall vara genomskinlig..*/
+    width: 90%;
+    height: 90%;
+    object-fit: conver;
+    background-color: transparent;
+}
+.row1 .About-right {
+    display: flex;
+    align-items: center;
+
+
+}
+.row1 .About-right .content{
+    padding-left: 20px;
+}
+.row1 .About-right .content p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 15px;
 }
