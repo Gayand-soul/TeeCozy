@@ -1,0 +1,122 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+.header {
+    min-height: 100vh;  /*..Header justeras:img täcker hela...*/
+    width: 100%;
+    background-image: linear-gradient(rgba(245, 245, 232, 0.7),rgba(245, 245, 240, 0.7)), url(20240919_HortensiadriedFlower.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;  /*.. en block skapas ef teecozy bild...*/
+    border: 1px solid rgba(241, 240, 204, 0.848);  /*..skapas en block ef teecozy bild...*/
+
+}
+nav img {         /*..logo justeras...*/
+    width: 150px;
+    background: transparent;
+    
+}
+.nav-links {    /*....HOME,ABOUT justeras...*/
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li {    /*....HOME,ABOUT justeras...*/
+    list-style: none;
+    display: inline-block;
+    padding:8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {   /*font färg för HOME, ABOUT*/
+    color: #043308;      /*font färg för HOME, ABOUT*/
+    text-decoration: none;
+    font-size: 23px;     
+}
+.nav-links ul li::after {  /*....HOME,ABOUT får en understreck...*/
+    content: '';
+    width: 0%;      /*..understreck är gömd (=därför 0%) om man vill visa den öka med 100%....*/
+    height: 2px;
+    background: #971006;  /*....HOME,ABOUT får en understreck färg...*/
+    display: block;
+    margin: auto;
+    transition: 0.9s;  /*..understreck ritas med 0.9s tidsintervall. ju > tal desto långsammare ritas linjen..*/
+}
+.nav-links ul li:hover::after{    /*..understreck blir synlig om man hover över den....*/
+    width: 100%;       
+}
+
+/*....Text ruta i mitten första sida................*/
+.text-box {
+ width: 90%;
+ position: absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);/*.Text ruta justeras riktigt mitten*/
+ text-align: center;
+ color:#032c07;
+ margin-bottom: 1px;
+ border: 1px solid rgba(241, 240, 204, 0.848);
+}
+.text-box h2 {
+    font-size: 50px;
+}
+.text-box h4 {
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color:#032c07;
+}
+
+/*--Tea of the Month första del section---------------*/
+.products1 {
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;   
+}
+h2 {
+    font-size: 40px;
+    font-weight: 25px;
+    color:#032c07;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 25px;
+    color:#032c07;
+}
+.row{           /*---3st kolumner skapas med row.---*/
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;  /*---denna rad=3st kolumner skapas med mellan rum---*/
+}
+.products-col{     /*---coures-column=3st kolumner skapas med row.---*/
+    flex-basis: 31%;
+    background:#ede7db;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    transition: 1s;   /*skugga när man hover over beans:hatsighet*/
+}
+
+
+
+/*--------------inställningar för små skärmar: Products sida-----------------------------*/
+@media(max-width: 700px){
+    .row{         
+      flex-direction: column;  /*..för små skärmar skapas mindre kolumner ...*/
+       
+    }
+}
