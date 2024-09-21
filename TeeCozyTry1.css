@@ -23,6 +23,8 @@ nav {
 nav img {         /*..logo justeras...*/
     width: 150px;
     background: transparent;
+    border:3px solid rgba(241, 240, 204, 0.848); 
+    border-radius: 50px;
     
 }
 .nav-links {    /*....HOME,ABOUT justeras...*/
@@ -55,7 +57,7 @@ nav img {         /*..logo justeras...*/
     width: 100%;       
 }
 
-/*....Text ruta i mitten första sida................*/
+/*....Text/Bild rutor 3st mitten första sida................*/
 .text-box {
  width: 90%;
  position: absolute;
@@ -110,6 +112,23 @@ h4 {
     height: 200px;
     transition: 1s;   /*skugga när man hover over beans:hatsighet*/
 }
+
+.products-col img {
+    border-radius: 10px;
+    width: 270px; /*..bilden skall vara precis innanför rutan..*/
+    height: 160px; /*..bilden skall vara precis innanför rutan..*/
+    border: 3px solid rgba(240, 229, 128, 0.848);
+    
+}
+.products-col p{
+    padding: 0;
+}
+.products-col h4 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
 
 
 
